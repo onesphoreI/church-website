@@ -66,7 +66,10 @@ header {
   /* Hero section */
   .hero {
     position: relative;
-    background: url('images/hero.jpg') no-repeat center center/cover;
+    background: 
+    linear-gradient(rgba(0,0,0,0.4), rgba(0,0,0,0.4)), 
+    url('images/hero.jpg') no-repeat center center/cover;
+    background-color: #333; /* ✅ fallback color if image fails */
     color: white;
     text-align: center;
     padding: 100px 20px;
@@ -101,7 +104,7 @@ header {
   
   /* About Section */
   .about {
-    background: white;
+    background-color: white;
     padding: 60px 20px;
     text-align: center;
   }
@@ -120,7 +123,7 @@ header {
 
 /* Services Section */
 .services {
-    background: white;
+    background-color: #f8f8f8;
     padding: 60px 20px;
     text-align: center;
   }
@@ -386,5 +389,13 @@ a, .event-card, button {
     }
     100% {
       transform: translateX(-50%);
+    }
+  }
+
+  /*Force the site to look the same always*/
+  @media (prefers-color-scheme: dark) {
+    body {
+      background-color: #f4f4f4; /* same as light mode */
+      color: #333;
     }
   }
