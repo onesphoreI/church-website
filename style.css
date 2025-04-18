@@ -123,7 +123,7 @@ header {
 
 /* Services Section */
 .services {
-    background-color: #f8f8f8;
+    background-color: #fef8f3;
     padding: 60px 20px;
     text-align: center;
   }
@@ -141,7 +141,7 @@ header {
   
   /* Events Section */
   .events {
-    background: #f9f9f9;
+    background: #f0f7ff;
     padding: 60px 20px;
     text-align: center;
   }
@@ -178,6 +178,7 @@ header {
   
   /* Contact Section */
   .contact form {
+    background-color: #fef8f3;
     display: flex;
     flex-direction: column;
     gap: 15px;
