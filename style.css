@@ -178,9 +178,14 @@ header {
   
   /* Contact Section */
   .contact {
-    background-color: #34b998; /* or use a slightly deeper tone */
+    background-color: #1d1b1b; /* or use a slightly deeper tone */
     padding: 60px 20px;
-    text-align: center;
+    text-align: left;
+    text-emphasis-color: white;
+  }
+
+  .contact h2 {
+    color : white;
   }
   .contact form {
     display: flex;
