@@ -1,3 +1,11 @@
+:root {
+  --primary: #1e3a8a; /* deep blue */
+  --accent: #facc15;  /* warm yellow */
+  --bg-light: #f9fafb;
+  --text-dark: #1f2937;
+}
+
+
 /* Reset default browser styles */
 * {
     margin: 0;
@@ -19,11 +27,27 @@
     margin: 0 auto;
     padding: 20px;
   }
-  
+  /*Logo styles*/
+  .logo {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.logo img {
+  height: 40px;
+  width: auto;
+}
+
+.logo span {
+  font-size: 1.4em;
+  font-weight: bold;
+  color: white;
+}
   /* Header styles */
 /* HEADER FIXED STYLE */
 header {
-    background-color: #333;
+    background-color: var(--primary);
     color: white;
     padding: 20px 0;
     position: sticky;
@@ -37,11 +61,6 @@ header {
     justify-content: space-between;
     align-items: center;
     flex-wrap: wrap;
-  }
-  
-  .logo {
-    font-size: 1.8em;
-    font-weight: bold;
   }
   
   .nav-links {
@@ -60,14 +79,13 @@ header {
   }
   
   .nav-links li a:hover {
-    color: #f0c040;
+    color: var(--accent);
   }
   
   /* Hero section */
   .hero {
     position: relative;
-    background: 
-    linear-gradient(rgba(0,0,0,0.4), rgba(0,0,0,0.4)), 
+    background: linear-gradient(rgba(30,58,138,0.6), rgba(30,58,138,0.6)), 
     url('images/hero.jpg') no-repeat center center/cover;
     background-color: #333; /* ✅ fallback color if image fails */
     color: white;
@@ -123,7 +141,7 @@ header {
 
 /* Services Section */
 .services {
-    background-color: #fef8f3;
+    background-color: white;
     padding: 60px 20px;
     text-align: center;
   }
@@ -181,7 +199,6 @@ header {
     background-color: #1d1b1b; /* or use a slightly deeper tone */
     padding: 60px 20px;
     text-align: left;
-    text-emphasis-color: white;
   }
 
   .contact h2 {
@@ -204,7 +221,7 @@ header {
   }
   
   .contact button {
-    background-color: #333;
+    background-color: var(--primary);
     color: white;
     padding: 12px;
     border: none;
@@ -214,41 +231,46 @@ header {
   }
   
   .contact button:hover {
-    background-color: #555;
+    background-color: var(--accent);
+    color: #111;
   }
 
   /* RESPONSIVE STYLES */
 @media (max-width: 768px) {
-    nav ul {
-      flex-direction: column;
-      gap: 10px;
-      align-items: center;
-    }
-  
-    .hero {
-      padding: 60px 20px;
-    }
-  
-    h1, h2, h3 {
-      font-size: 1.5em;
-    }
-  
-    .container {
-      padding: 10px;
-    }
-  
-    .event-card p {
-      font-size: 0.9em;
-    }
+  nav ul,
+  .nav-links {
+    flex-direction: column;
+    gap: 10px;
+    align-items: center;
+    text-align: center;
   }
+
+  .hero {
+    padding: 60px 20px;
+  }
+
+  h1, h2, h3 {
+    font-size: 1.5em;
+  }
+
+  .container {
+    padding: 10px;
+  }
+
+  .event-card p {
+    font-size: 0.9em;
+  }
+
+  .header-content {
+    flex-direction: column;
+    align-items: center;
+    gap: 10px;
+  }
+}
 
   /* Smooth transition on hover */
 a, .event-card, button {
     transition: all 0.3s ease;
-  }
-  
-  nav a:hover {
-    color: #f0c040;
   }
   
   .event-card:hover {
@@ -257,19 +279,7 @@ a, .event-card, button {
   }
 
   /*Make header responsive*/
-  @media (max-width: 768px) {
-    .header-content {
-      flex-direction: column;
-      align-items: center;
-      gap: 10px;
-    }
   
-    .nav-links {
-      flex-direction: column;
-      gap: 10px;
-      text-align: center;
-    }
-  }
 
   /* Image slideshow*/
   .photo-strip {
@@ -317,7 +327,7 @@ a, .event-card, button {
   /*New section*/
 
   .news {
-    background: #f4f4f4;
+    background-color: #eaf4ff;
     padding: 60px 20px;
     text-align: center;
   }
@@ -391,16 +401,7 @@ a, .event-card, button {
   .flag-wrapper:hover .flag-track {
     animation-play-state: paused;
   }
-  
-  /* Scroll animation */
-  @keyframes scroll-flags {
-    0% {
-      transform: translateX(0);
-    }
-    100% {
-      transform: translateX(-50%);
-    }
-  }
+
 
   /*Force the site to look the same always*/
   @media (prefers-color-scheme: dark) {
@@ -409,3 +410,41 @@ a, .event-card, button {
       color: #333;
     }
   }
+  footer {
+  background-color: var(--primary);
+  color: white;
+  text-align: center;
+  padding: 20px 0;
+}
+@media (max-width: 480px) {
+  .logo span {
+    font-size: 1em;
+  }
+
+  .hero h2 {
+    font-size: 1.5em;
+  }
+
+  .hero p {
+    font-size: 1em;
+  }
+
+  .nav-links {
+    flex-direction: column;
+    gap: 8px;
+  }
+
+  .event-card,
+  .news-item {
+    font-size: 0.9em;
+  }
+
+  .contact h2 {
+    font-size: 1.4em;
+  }
+
+  .contact form {
+    width: 100%;
+  }
+}
+  
