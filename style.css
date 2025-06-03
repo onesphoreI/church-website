@@ -56,6 +56,8 @@
 /* Mobile nav hidden by default */
 .nav-wrapper {
   display: flex;
+  flex-direction: row;
+  align-items: center;
 }
 
 @media (max-width: 768px) {
@@ -64,12 +66,14 @@
   }
 
   .nav-wrapper {
-    display: none;
+    display: none; /* override from desktop */
+    flex-direction: column;
+    align-items: center;
     width: 100%;
   }
 
   .nav-wrapper.open {
-    display: block;
+    display: flex;
     background-color: var(--primary);
     margin-top: 10px;
   }
@@ -109,6 +113,7 @@ header {
     justify-content: space-between;
     align-items: center;
     flex-wrap: wrap;
+    gap: 10px; 
   }
   
   .nav-links {
@@ -285,7 +290,6 @@ header {
 
   /* RESPONSIVE STYLES */
 @media (max-width: 768px) {
-  nav ul,
   .nav-links {
     flex-direction: column;
     gap: 10px;
@@ -312,7 +316,10 @@ header {
   .header-content {
     flex-direction: column;
     align-items: center;
-    gap: 10px;
+    text-align: center;
+  }
+  .menu-toggle {
+    align-self: flex-end;
   }
 }
 
