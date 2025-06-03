@@ -3,6 +3,7 @@
   --accent: #facc15;  /* warm yellow */
   --bg-light: #f9fafb;
   --text-dark: #1f2937;
+  --section-alt: #f7faff;
 }
 
 
@@ -175,7 +176,7 @@ header {
   
   /* About Section */
   .about {
-    background-color: white;
+    background-color: #f7faff; /* soft, slightly bluish */
     padding: 60px 20px;
     text-align: center;
   }
